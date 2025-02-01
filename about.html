@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="About.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header" data-aos="zoom-in">
+      <div class="nav-logo">
+          <img class="logo" src="https://growwtv.com/images/wordmark.png" alt="logo">
+      </div>      
+      
+      <nav>
+          <ul class="nav-links">
+              <li><a href="/index/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="/Channels/chennels.html">Channels</a></li>
+              <li><a href="/Contect/contect.html">Contact</a></li>
+          </ul>
+      </nav>
+    
+      <!-- Mobile Menu Button (Hamburger) -->
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </button>
+    </header>
+
+    <div class="adrio-container" >
+      <div class="adrio-header" data-aos="zoom-in">
+        <h1>We Are <span class="adrio-highlight">growwtv</span></h1>
+        <p>
+          We create digital stories of success. As a leading Digital Marketing
+          Agency, we combine creativity, experience, and creative thinking to
+          assist companies. From SEO strategies to engaging social media
+          campaigns, we deliver results that are remarkable. Be part of the
+          revolution in digital media and boost your business today.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content-wrapper" data-aos="zoom-in">
+        <!-- Image Section -->
+        <div class="image-container">
+          <img
+            src="https://adzdrio.com/images/trophy_image.png"
+            alt="Sample Image"
+          />
+        </div>
+
+        <!-- Text Content -->
+        <div class="text-content">
+          <h2>Our Goal</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+      </div>
+      <div class="content-wrapper" data-aos="zoom-in">
+        <!-- Image Section -->
+
+        <!-- Text Content -->
+
+        <div class="text-content">
+          <h2>Our Vision</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://adzdrio.com/images/Our_Vision.png"
+            alt="Sample Image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer class="custom-footer" data-aos="zoom-in">
+      <div class="footer-column">
+        <h3>TelNET</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="footer-column">
+        <h3>Links</h3>
+        <a href="#">FAQ</a>
+        <a href="#">Term & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="footer-column">
+        <h3>More Links</h3>
+        <a href="#">Works</a>
+        <a href="#">Studio</a>
+        <a href="#">News</a>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p>Info@Envato.Com</p>
+        <p>380 St Kilda Road, Melbourne VIC 3004, Australia</p>
+        <div class="social-icons">
+          <a href="#">🔗</a>
+          <a href="#">🔗</a>
+          <a href="#">🔗</a>
+          <a href="#">🔗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2024 TelNET - Internet Service Provider WordPress Theme.
+      </div>
+    </footer>
+    <script>
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const dots = document.querySelectorAll(".dot");
+
+        slides.forEach((slide, index) => {
+          slide.style.transform = `translateX(${-currentIndex * 100}%)`;
+        });
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentIndex);
+        });
+      }
+
+      function moveSlide(direction) {
+        const slides = document.querySelectorAll(".carousel-slide");
+        currentIndex =
+          (currentIndex + direction + slides.length) % slides.length;
+        updateCarousel();
+      }
+
+      function currentSlide(index) {
+        currentIndex = index - 1;
+        updateCarousel();
+      }
+
+      document.addEventListener("DOMContentLoaded", updateCarousel);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 1200, // Set animation duration
+          easing: "ease-in-out", // Set easing type
+          once: true, // Trigger animation only once when element is visible
+        });
+      });
+    </script>
+
+  </body>
+</html>

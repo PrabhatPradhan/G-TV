@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contect.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+</head>
+
+<script>
+  function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
+<body>
+    
+<header class="header" data-aos="zoom-in">
+  <div class="nav-logo">
+      <img   src="https://growwtv.com/images/wordmark.png" alt="logo">
+  </div>      
+  
+  <nav>
+      <ul class="nav-links">
+          <li><a href="/index/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="/Channels/chennels.html">Channels</a></li>
+          <li><a href="/Contect/contect.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <!-- Mobile Menu Button (Hamburger) -->
+  <button class="mobile-menu-btn" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+  </button>
+</header>
+
+  <section class="contact-section"  >
+    <div class="container">
+      <!-- Contact Form -->
+      <div class="form-container" data-aos="zoom-in">
+        <h1>Contact Us</h1>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="info-container" data-aos="zoom-in">
+        <h2>Get in Touch</h2>
+        <div class="info-item">
+          <img src="https://growwtv.com/images/location.png" alt="Location">
+          <div>
+            <strong>Our Address</strong>
+            <p>123 Main Street, Anytown, USA</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="https://growwtv.com/images/email_address.png" alt="Email">
+          <div>
+            <strong>Email Us</strong>
+            <p>info@example.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="https://growwtv.com/images/contect_no.png" alt="Phone">
+          <div>
+            <strong>Call Us</strong>
+            <p>+1 123-456-7890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    
+    <footer class="custom-footer" data-aos="zoom-in">
+        <div class="footer-column">
+          <h3>TelNET</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="footer-column">
+          <h3>Links</h3>
+          <a href="#">FAQ</a>
+          <a href="#">Term & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Help</a>
+        </div>
+        <div class="footer-column">
+          <h3>More Links</h3>
+          <a href="#">Works</a>
+          <a href="#">Studio</a>
+          <a href="#">News</a>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <p>Info@Envato.Com</p>
+          <p>380 St Kilda Road, Melbourne VIC 3004, Australia</p>
+          <div class="social-icons">
+            <a href="#">🔗</a>
+            <a href="#">🔗</a>
+            <a href="#">🔗</a>
+            <a href="#">🔗</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2024 TelNET - Internet Service Provider WordPress Theme.
+        </div>
+      </footer>
+      <script>
+
+        let currentIndex = 0;
+        
+                function updateCarousel() {
+                  const slides = document.querySelectorAll(".carousel-slide");
+                  const dots = document.querySelectorAll(".dot");
+                
+                  slides.forEach((slide, index) => {
+                    slide.style.transform = `translateX(${-currentIndex * 100}%)`;
+                  });
+                
+                  dots.forEach((dot, index) => {
+                    dot.classList.toggle("active", index === currentIndex);
+                  });
+                }
+                
+                function moveSlide(direction) {
+                  const slides = document.querySelectorAll(".carousel-slide");
+                  currentIndex = (currentIndex + direction + slides.length) % slides.length;
+                  updateCarousel();
+                }
+                
+                function currentSlide(index) {
+                  currentIndex = index - 1;
+                  updateCarousel();
+                }
+                
+                document.addEventListener("DOMContentLoaded", updateCarousel);
+        
+                document.addEventListener('DOMContentLoaded', function () {
+                AOS.init({
+                  duration: 1200,  // Set animation duration
+                  easing: 'ease-in-out',  // Set easing type
+                  once: true,  // Trigger animation only once when element is visible
+                });
+              });
+        
+              </script>
+             
+</body>
+</html>
