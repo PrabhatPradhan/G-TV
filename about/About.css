@@ -231,6 +231,7 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  
 }
 
 .nav-links li {
@@ -241,6 +242,7 @@ body {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  margin-right: 2rem;
   transition: 0.3s;
 }
 
